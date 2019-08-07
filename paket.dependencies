@@ -7,9 +7,9 @@ nuget FSharp.Compiler.Service
 nuget FSharp.Quotations.Evaluator
 
 nuget Argu
+nuget Markdig
 nuget Suave
 
-nuget CommonMark.NET
 nuget dotless.Core
 nuget YamlDotNet
 

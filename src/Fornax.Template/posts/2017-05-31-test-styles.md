@@ -17,7 +17,6 @@ published: "2017-05-31"
 
 ###### Heading 6
 
-
 **Strange Case of Dr Jekyll and Mr Hyde** is the original
 title of a novella written by the Scottish author Robert Louis Stevenson
 that was first published in 1886. The work is commonly known today as
@@ -43,7 +42,6 @@ Robert Louis Stevenson Stevenson had long been intrigued by the idea...
 **Plot**
 
 John Utterson, a lawyer, is on his weekly walk with his relative...
-
 
 ### Lists
 
@@ -80,27 +78,25 @@ Categories:
 Robert Louis Stevenson:
 
 - Books
-    - An Inland Voyage (1878)
-    - Travels with a Donkey in the Cévennes (1879)
-    - The Silverado Squatters (1883)
-    - Memories and Portraits (1887)
-    - Across the Plains (1892)
-    - Eight Years of Trouble in Samoa (1892)
-    - The Amateur Emigrant (1895)
+  - An Inland Voyage (1878)
+  - Travels with a Donkey in the Cévennes (1879)
+  - The Silverado Squatters (1883)
+  - Memories and Portraits (1887)
+  - Across the Plains (1892)
+  - Eight Years of Trouble in Samoa (1892)
+  - The Amateur Emigrant (1895)
 - Novels
-    - Treasure Island (1883)
-    - Prince Otto (1885)
-    - Kidnapped (1886)
-    - The Black Arrow: A Tale of the Two Roses (1888)
-    - The Master of Ballantrae (1889)
-    - The Wrong Box (1889)
-    - The Wrecker (1892)
-    - Catriona (1893)
-    - The Ebb-Tide (1894)
-    - Weir of Hermiston (1896)
-    - St. Ives (1897)
-
-
+  - Treasure Island (1883)
+  - Prince Otto (1885)
+  - Kidnapped (1886)
+  - The Black Arrow: A Tale of the Two Roses (1888)
+  - The Master of Ballantrae (1889)
+  - The Wrong Box (1889)
+  - The Wrecker (1892)
+  - Catriona (1893)
+  - The Ebb-Tide (1894)
+  - Weir of Hermiston (1896)
+  - St. Ives (1897)
 
 ### Blockquotes
 
@@ -111,7 +107,6 @@ Biographer Graham Balfour quoted Stevenson's wife Fanny Stevenson:
 > "Why did you wake me? I was dreaming a fine bogey tale."
 > I had awakened him at the first transformation scene.
 
-
 Quotes from "The Strange Case of Dr. Jekyll and Mr. Hyde":
 
 > Quiet minds cannot be perplexed or frightened but go on in fortune
@@ -119,30 +114,33 @@ Quotes from "The Strange Case of Dr. Jekyll and Mr. Hyde":
 >
 > -- Robert Louis Stevenson
 
-
 > It is one thing to mortify curiosity, another to conquer it.
 >
 > -- Robert Louis Stevenson
-
 
 > If I am the chief of sinners, I am the chief of sufferers also.
 >
 > -- Robert Louis Stevenson
 
-
-
 ### Tables
 
----------------- | ------------------------
-Author           | Robert Louis Stevenson
-Original title   | Strange Case Of Dr Jekyll And Mr Hyde
-Country          | United Kingdom
-Language         | English
-Series           | None
-Genre            | Drama, Horror, Thriller, Gothic, Science fiction
-Publisher        | Longmans, Green & Co.
-Publication date | 5 January 1886
-
++------------------+---------------------------------------------------+
+| Author           | Robert Louis Stevenson                            |
++------------------+---------------------------------------------------+
+| Original title   | Strange Case Of Dr Jekyll And Mr Hyde             |
++------------------+---------------------------------------------------+
+| Country          | United Kingdom                                    |
++------------------+---------------------------------------------------+
+| Language         | English                                           |
++------------------+---------------------------------------------------+
+| Series           | None                                              |
++------------------+---------------------------------------------------+
+| Genre            | Drama, Horror, Thriller, Gothic, Science fiction  |
++------------------+---------------------------------------------------+
+| Publisher        | Longmans, Green & Co.                             |
++------------------+---------------------------------------------------+
+| Publication date | 5 January 1886                                    |
++------------------+---------------------------------------------------+
 
 ### Code n Code Blocks
 

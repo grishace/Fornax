@@ -74,7 +74,7 @@ module internal Utils =
 module Evaluator =
     open System.Globalization
     open System.Text
-    open Microsoft.FSharp.Compiler.Interactive.Shell
+    open FSharp.Compiler.Interactive.Shell
     open FSharp.Quotations.Evaluator
     open FSharp.Reflection
 
@@ -189,12 +189,15 @@ module Logger =
 
 module ContentParser =
     open Configuration
+    open Markdig
 
     let private isSeparator (input : string) =
         input.StartsWith "---"
 
     let private isLayout (input : string) =
         input.StartsWith "layout:"
+
+    let private pipeline = MarkdownPipelineBuilder().UseAdvancedExtensions().Build()
 
     ///`fileContent` - content of page to parse. Usually whole content of `.md` file
     ///`modelType` - `System.Type` representing type used as model of the page
@@ -209,7 +212,7 @@ module ContentParser =
 
         let content = content |> Array.skip 1 |> String.concat "\n"
         let config = config |> String.concat "\n"
-        let contentOutput = CommonMark.CommonMarkConverter.Convert content
+        let contentOutput = Markdown.ToHtml (content, pipeline)
         let configOutput = Yaml.parse modelType config
         configOutput, contentOutput
 
@@ -240,14 +243,14 @@ module ContentParser =
         let _, content = fileContent |> Array.splitAt indexOfSeperator
 
         let content = content |> Array.skip 1 |> String.concat "\n"
-        CommonMark.CommonMarkConverter.Convert content
+        Markdown.ToHtml (content, pipeline)
 
     let containsLayout (fileContent : string) =
         fileContent.Split '\n'
         |> Array.exists isLayout
 
     let compileMarkdown (fileContent : string) =
-        CommonMark.CommonMarkConverter.Convert fileContent
+        Markdown.ToHtml (fileContent, pipeline)
 
 type Link = string
 type Title = string
@@ -297,7 +300,7 @@ let getPosts (projectRoot : string) =
     |> Array.map (fun n ->
         // All the text in the .md file.
         let text = Utils.retry 2 (fun _ -> File.ReadAllText n)
-        
+
         let config = getConfig text |> String.split '\n'
 
         let content = getContent text
@@ -311,13 +314,13 @@ let getPosts (projectRoot : string) =
                 config |> List.tryFind (fun n -> n.ToLower().StartsWith "author" ) |> Option.map (fun n -> n.Split(':').[1] |> trimString)
             with
             | _ -> None
-        
+
         let published =
             try
                 config |> List.tryFind (fun n -> n.ToLower().StartsWith "published" ) |> Option.map (fun n -> n.Split(':').[1] |> trimString |> DateTime.Parse)
             with
             | _ -> None
-        
+
         let tags =
             try
                 let x =
