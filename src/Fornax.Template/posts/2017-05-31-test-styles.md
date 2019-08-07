@@ -124,6 +124,23 @@ Quotes from "The Strange Case of Dr. Jekyll and Mr. Hyde":
 
 ### Tables
 
+#### Pipe
+
+*Note:* Cannot build a headerless table in this mode.
+
+Property         | Value
+-----------------|---------------------------------------------------
+Author           | Robert Louis Stevenson
+Original title   | Strange Case Of Dr Jekyll And Mr Hyde
+Country          | United Kingdom
+Language         | English
+Series           | None
+Genre            | Drama, Horror, Thriller, Gothic, Science fiction
+Publisher        | Longmans, Green & Co.
+Publication date | 5 January 1886
+
+#### Grid
+
 +------------------+---------------------------------------------------+
 | Author           | Robert Louis Stevenson                            |
 +------------------+---------------------------------------------------+
